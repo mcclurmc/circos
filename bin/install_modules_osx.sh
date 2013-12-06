@@ -16,7 +16,9 @@ brew info libgd | grep -q "Not installed" && brew install libgd
 
 cpanm Config::General
 cpanm Font::TTF::Font
-cpanm GD --force
+cpanm GD || cpanm GD --force # try again, some tests fail on OSX
 cpanm Math::VecStat
+cpanm Math::Bezier
 cpanm Readonly
 cpanm Text::Format
+cpanm Set::IntSpan
