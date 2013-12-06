@@ -12,7 +12,7 @@ which brew > /dev/null || (
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)" && \
     brew doctor)
 
-brew info libgd | grep -q "Not installed" && brew install libgd
+brew info libgd | grep -q "Not installed" && brew install libgd --with-freetype
 
 cpanm Config::General
 cpanm Font::TTF::Font
